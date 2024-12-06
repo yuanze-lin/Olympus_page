@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Text-Driven Image Editing via Learnable Regions.">
+        content="Olympus: A Universal Task Router for Computer Vision Tasks.">
   <meta name="keywords" content="Text-Driven Image Editing, AIGC">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Text-Driven Image Editing via Learnable Regions</title>
+  <title>Olympus: A Universal Task Router for Computer Vision Tasks</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -59,35 +59,37 @@
     <div style = "top: 50px, bottom:-40px" class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Text-Driven Image Editing via Learnable Regions</h1>
+          <h1 class="title is-1 publication-title">Olympus: A Universal Task Router for Computer Vision Tasks</h1>
           <sub_title>CVPR 2024</sub_title>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yuanze-lin.me/">Yuanze Lin</a><sup>1</sup>&nbsp;&nbsp;</span>
             <span class="author-block">
-              <a href="https://wenz116.github.io/">Yi-Wen Chen</a><sup>2</sup>&nbsp;&nbsp;</span>
+              <a href="https://scholar.google.com/citations?user=hJrIyCwAAAAJ&hl=en">Yunsheng Li</a><sup>2</sup>&nbsp;&nbsp;</span>
             <span class="author-block">
-              <a href="https://sites.google.com/site/yihsuantsai/">Yi-Hsuan Tsai</a><sup>3</sup>&nbsp;&nbsp;
+              <a href="https://www.dongdongchen.bid/">Dongdong Chen</a><sup>2</sup>&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              <a href="http://www.lujiang.info/">Lu Jiang</a><sup>3</sup>&nbsp;&nbsp;
+              <a href="https://weijianxu.com/">Weijian Xu</a><sup>2</sup>&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a><sup>2,</sup><sup>3</sup>
+              <a href="https://www.ron-clark.com/">Ronald Clark</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Oxford   &nbsp;&nbsp;&nbsp;&nbsp;   </span>
-            <span class="author-block"><sup>2</sup>UC Merced  &nbsp;&nbsp;&nbsp;&nbsp;   </span>
-            <span class="author-block"><sup>3</sup>Google </span>
+            <span class="author-block"><sup>2</sup>Microsoft  &nbsp;&nbsp;&nbsp;&nbsp;   </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Lin_Text-Driven_Image_Editing_via_Learnable_Regions_CVPR_2024_paper.pdf"
+                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -96,7 +98,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2311.16432.pdf"
+                <a href="https://arxiv.org/abs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -105,25 +107,25 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+<!--               <span class="link-block">
                 <a href="https://youtu.be/FpMWRXFraK8"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
-                </a>
-              <span class="link-block">
+                </a> -->
+<!--               <span class="link-block">
                 <a href="https://colab.research.google.com/drive/1mRWzNOlo_RR_zvrnHODgBoPAa59vGUdz#scrollTo=v_4gmzDOzN98"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-google"></i>
                   </span>
                   <span>Colab</span>
-                </a>
+                </a> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/yuanze-lin/LearnableRegions"
+                <a href="https://github.com/yuanze-lin/Olympus"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -144,10 +146,10 @@
   <div style = "top:-80px;" class="container is-max-desktop">
     <hr style="height:0.5px;border:none;color:#333;background-color:#333;">
       <p>
-        Given an input image and a language description for editing, our method
-        can generate realistic and relevant images without the need for user-specified regions for editing.
-        It performs local image editing while preserving the image context. Our method can also handle <b><font color="#0080FF">multiple-object</font></b> and 
-        <b><font color="#0080FF">long-paragraph</font></b> scenarios.
+         Given the user prompts, a trainable MLLM can perform routing across a wide range of specified models. In this concept, MLLMs
+         can solve multimodal understanding tasks (e.g., VQA) with its inherited capacity, while MLLMs can allocate appropriate specialized models
+         to address multimodal generative and classic vision tasks (e.g., image generation and depth estimation), then aggregate the results and deliver
+         a response to the user.
       </p>
     <div class="column is-full">
             <img style="width:100%;" src="./static/images/overview.png"
@@ -166,12 +168,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Language has emerged as a natural interface for image editing. In this paper, we introduce a method for region-based image editing driven by textual prompts, 
-            without the need for user-provided masks or sketches. Specifically, our approach leverages an existing pre-trained text-to-image model and introduces a bounding
-            box generator to find the edit regions that are aligned with the textual prompts. We show that this simple approach enables flexible editing that is compatible with current 
-            image generation models, and is able to handle complex prompts featuring multiple objects, complex sentences, or long paragraphs. 
-            We conduct an extensive user study to compare our method against state-of-the-art methods. Experiments demonstrate the competitive performance of our method in manipulating images 
-            with high fidelity and realism that align with the language descriptions provided.
+            We introduce Olympus, a new approach that transforms Multimodal Large Language Models (MLLMs) into a unified framework capable of handling a wide array of computer
+            vision tasks. Utilizing a controller MLLM, Olympus delegates over 20 specialized tasks across images, videos, and 3D 
+            objects to dedicated modules. This instruction-based routing enables complex workflows through chained actions
+            without the need for training heavy generative models. Olympus easily integrates with existing MLLMs, expanding their
+            capabilities with comparable performance. Experimental results demonstrate that Olympus achieves an average routing
+            accuracy of 94.75% across 20 tasks and precision of 91.82% in chained action scenarios, showcasing its effectiveness
           </p>
         </div>
         </div>
@@ -191,12 +193,9 @@
                  alt=""/>
            <div class="content has-text-justified">
            <p>
-           <b>Framework figure.</b> We first feed the input image into the self-supervised learning (SSL) model, e.g., DINO, to obtain the attention map and feature, 
-           which are used for anchor initialization. The region generation model initializes several region proposals (e.g., 3 proposals in this figure)
-           around each anchor point, and learns to select the most suitable ones among them with the region generation network (RGN). 
-           The predicted region and the text descriptions are then fed into a pre-trained text-to-image model for image editing. 
-           We utilize the CLIP model for learning the score to measure the similarity between the given text description and the edited result, 
-           forming a training signal to learn our region generation model.
+           <b>The Framework of Olympus</b> It can solve those tasks like VQA through the inherited capacities of MLLM directly. For other tasks,
+          e.g., image editing, Olympus can generate the response, which consists of task-specific routing tokens and refined prompts, they are then
+          used to schedule specialist models for addressing diverse user requests.
            </p>
         </div>
      </div>
@@ -207,7 +206,7 @@
 </section>
 
   
-<section class="section">
+<!-- <section class="section">
   <div style = "top:-110px;" class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -221,15 +220,15 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div style = "top:-90px;" class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Comparison</h2>
+        <h2 class="title is-3">Multimodal Understanding Performance</h2>
           <div class="column is-full">
-            <img src="./static/images/comparison.png"
+            <img src="./static/images/results1.png"
                  class="img"
                  alt=""/>
           </div>
@@ -242,9 +241,9 @@
   <div style = "top:-90px;" class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Our Region Generator + MaskGiT</h2>
+        <h2 class="title is-3">Task Routing Performance</h2>
           <div class="column is-full">
-            <img src="./static/images/maskgit.png"
+            <img src="./static/images/results2.png"
                  class="img"
                  alt=""/>
           </div>
@@ -257,9 +256,9 @@
   <div style = "top:-90px;" class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Results Using Diverse Prompts</h2>
+        <h2 class="title is-3">Diverse Applications</h2>
           <div class="column is-full">
-            <img src="./static/images/results.png"
+            <img src="./static/images/applications.png"
                  class="img"
                  alt=""/>
           </div>
@@ -274,13 +273,13 @@
       <div class="column is-full">
         <h2 class="title is-3">More Results</h2>
           <div class="column is-full">
-            <img src="./static/images/results2.png"
+            <img src="./static/images/application2.png"
                  class="img"
                  alt=""/>
             
-            <img style="width:98.7%;margin-left:8px;" src="./static/images/results3.png"
+<!--             <img style="width:98.7%;margin-left:8px;" src="./static/images/results3.png"
                  class="img"
-                 alt=""/>
+                 alt=""/> -->
           </div>
     </div>
     </div>
@@ -291,9 +290,9 @@
   <div style = "top:-100px;bottom:-150px"  class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-quarters">
-        <h2 class="title is-3">User Study</h2>
+        <h2 class="title is-3">Human Evaluation</h2>
           <div class="column is-three-quarters">
-            <img style="margin-left:95px;" src="./static/images/user_study.png"
+            <img style="margin-left:95px;" src="./static/images/human_evaluation.png"
                  class="img"
                  alt=""/>
           </div>
@@ -302,7 +301,7 @@
   </div>
 </section>
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div style = "top:-80px;" class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{lin2024text,
@@ -313,7 +312,7 @@
   year={2024}
 }</code></pre>
   </div>
-</section>
+</section> -->
   
 <footer style = "height:30px" class="footer">
   <div style = "top:-20px;" class="container">
