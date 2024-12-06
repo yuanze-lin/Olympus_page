@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Text-Driven Image Editing via Learnable Regions.">
+  <meta name="keywords" content="Text-Driven Image Editing, AIGC">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text-Driven Image Editing via Learnable Regions</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  
+    <style>
+        sub_title {
+            text-align: center;
+            display: block;
+            margin-top: -20px;
+            position: relative;
+            font-size: 30px; /* Adjust the font size as needed */
+            color: #0000FF;
+        }
+    </style>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div style = "top: 50px, bottom:-40px" class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Text-Driven Image Editing via Learnable Regions</h1>
+          <sub_title>CVPR 2024</sub_title>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yuanze-lin.me/">Yuanze Lin</a><sup>1</sup>&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://wenz116.github.io/">Yi-Wen Chen</a><sup>2</sup>&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/yihsuantsai/">Yi-Hsuan Tsai</a><sup>3</sup>&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://www.lujiang.info/">Lu Jiang</a><sup>3</sup>&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a><sup>2,</sup><sup>3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Oxford   &nbsp;&nbsp;&nbsp;&nbsp;   </span>
+            <span class="author-block"><sup>2</sup>UC Merced  &nbsp;&nbsp;&nbsp;&nbsp;   </span>
+            <span class="author-block"><sup>3</sup>Google </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Lin_Text-Driven_Image_Editing_via_Learnable_Regions_CVPR_2024_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.16432.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/FpMWRXFraK8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              <span class="link-block">
+                <a href="https://colab.research.google.com/drive/1mRWzNOlo_RR_zvrnHODgBoPAa59vGUdz#scrollTo=v_4gmzDOzN98"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-google"></i>
+                  </span>
+                  <span>Colab</span>
+                </a>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yuanze-lin/LearnableRegions"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+<section class="section">
+  <div style = "top:-80px;" class="container is-max-desktop">
+    <hr style="height:0.5px;border:none;color:#333;background-color:#333;">
+      <p>
+        Given an input image and a language description for editing, our method
+        can generate realistic and relevant images without the need for user-specified regions for editing.
+        It performs local image editing while preserving the image context. Our method can also handle <b><font color="#0080FF">multiple-object</font></b> and 
+        <b><font color="#0080FF">long-paragraph</font></b> scenarios.
+      </p>
+    <div class="column is-full">
+            <img style="width:100%;" src="./static/images/overview.png"
+                 class="img"
+                 alt=""/>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div style = "top:-110px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Language has emerged as a natural interface for image editing. In this paper, we introduce a method for region-based image editing driven by textual prompts, 
+            without the need for user-provided masks or sketches. Specifically, our approach leverages an existing pre-trained text-to-image model and introduces a bounding
+            box generator to find the edit regions that are aligned with the textual prompts. We show that this simple approach enables flexible editing that is compatible with current 
+            image generation models, and is able to handle complex prompts featuring multiple objects, complex sentences, or long paragraphs. 
+            We conduct an extensive user study to compare our method against state-of-the-art methods. Experiments demonstrate the competitive performance of our method in manipulating images 
+            with high fidelity and realism that align with the language descriptions provided.
+          </p>
+        </div>
+        </div>
+     </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div style = "top:-110px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <div class="column is-full">
+            <img style="width:100%;" src="./static/images/framework.png"
+                 class="img"
+                 alt=""/>
+           <div class="content has-text-justified">
+           <p>
+           <b>Framework figure.</b> We first feed the input image into the self-supervised learning (SSL) model, e.g., DINO, to obtain the attention map and feature, 
+           which are used for anchor initialization. The region generation model initializes several region proposals (e.g., 3 proposals in this figure)
+           around each anchor point, and learns to select the most suitable ones among them with the region generation network (RGN). 
+           The predicted region and the text descriptions are then fed into a pre-trained text-to-image model for image editing. 
+           We utilize the CLIP model for learning the score to measure the similarity between the given text description and the edited result, 
+           forming a training signal to learn our region generation model.
+           </p>
+        </div>
+     </div>
+  </div>
+ </div>
+    </div>
+  </div>
+</section>
+
+  
+<section class="section">
+  <div style = "top:-110px;" class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Video</h2>
+        <div class="content has-text-justified">
+         <iframe src="https://www.youtube.com/embed/FpMWRXFraK8?si=OvpWTYpNZhC-U-EH" allowfullscreen="true" frameborder="0" scrolling="yes" 
+           seamless="seamless" style="display:block; width:100%; height:50vh;">
+        </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style = "top:-90px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Comparison</h2>
+          <div class="column is-full">
+            <img src="./static/images/comparison.png"
+                 class="img"
+                 alt=""/>
+          </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style = "top:-90px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Our Region Generator + MaskGiT</h2>
+          <div class="column is-full">
+            <img src="./static/images/maskgit.png"
+                 class="img"
+                 alt=""/>
+          </div>
+    </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div style = "top:-90px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results Using Diverse Prompts</h2>
+          <div class="column is-full">
+            <img src="./static/images/results.png"
+                 class="img"
+                 alt=""/>
+          </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style = "top:-100px;"  class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">More Results</h2>
+          <div class="column is-full">
+            <img src="./static/images/results2.png"
+                 class="img"
+                 alt=""/>
+            
+            <img style="width:98.7%;margin-left:8px;" src="./static/images/results3.png"
+                 class="img"
+                 alt=""/>
+          </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style = "top:-100px;bottom:-150px"  class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-quarters">
+        <h2 class="title is-3">User Study</h2>
+          <div class="column is-three-quarters">
+            <img style="margin-left:95px;" src="./static/images/user_study.png"
+                 class="img"
+                 alt=""/>
+          </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div style = "top:-80px;" class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{lin2024text,
+  title={Text-driven image editing via learnable regions},
+  author={Lin, Yuanze and Chen, Yi-Wen and Tsai, Yi-Hsuan and Jiang, Lu and Yang, Ming-Hsuan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7059--7068},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+  
+<footer style = "height:30px" class="footer">
+  <div style = "top:-20px;" class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+           We borrow the source code of this website from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>, which is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+             
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
