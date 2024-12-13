@@ -1,4 +1,3 @@
-# Olympus Webpage
 # <img src="https://github.com/yuanze-lin/Olympus/blob/main/asset/olympus.png" alt="icon" width="40" height="40" style="vertical-align:middle; margin-right:5px;" /> Olympus: A Universal Task Router for Computer Vision Tasks <br /> 
 **:hearts: If you find our project is helpful for your research, please kindly give us a :star2: and cite our paper :bookmark_tabs:   : )**
 
