@@ -11,17 +11,17 @@
 
 ## :low_brightness: Overview 
 
-![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/overview.png)
+![image](https://github.com/yuanze-lin/Olympus_page/blob/main/asset/overview.png)
 
 
 ## :crystal_ball: Suppored Capacities (Covering 20 tasks)
 
-![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/capacities.png)
+![image](https://github.com/yuanze-lin/Olympus_page/blob/main/asset/capacities.png)
 
 
 ## :snowboarder: Diverse Applications
 
-![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/application.png)
+![image](https://github.com/yuanze-lin/Olympus_page/blob/main/asset/application.png)
 
 
 # Website License
