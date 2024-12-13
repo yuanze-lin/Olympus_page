@@ -1,4 +1,4 @@
-# <img src="https://github.com/yuanze-lin/Olympus/blob/main/asset/olympus.png" alt="icon" width="40" height="40" style="vertical-align:middle; margin-right:5px;" /> Olympus: A Universal Task Router for Computer Vision Tasks <br /> 
+# <img src="https://github.com/yuanze-lin/Olympus_page/blob/main/asset/olympus.png" alt="icon" width="40" height="40" style="vertical-align:middle; margin-right:5px;" /> Olympus: A Universal Task Router for Computer Vision Tasks <br /> 
 
 [![PDF](https://img.shields.io/badge/PDF-Download-orange?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://arxiv.org/pdf/2412.09612)
 [![arXiv](https://img.shields.io/badge/arXiv-2412.09612-b31b1b.svg)](https://arxiv.org/pdf/2412.09612) 
@@ -11,17 +11,17 @@
 
 ## :low_brightness: Overview 
 
-![image](https://github.com/yuanze-lin/Olympus/blob/main/asset/overview.png)
+![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/overview.png)
 
 
 ## :crystal_ball: Suppored Capacities (Covering 20 tasks)
 
-![image](https://github.com/yuanze-lin/Olympus/blob/main/asset/capacities.png)
+![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/capacities.png)
 
 
 ## :snowboarder: Diverse Applications
 
-![image](https://github.com/yuanze-lin/Olympus/blob/main/asset/application.png)
+![image](https://github.com/yuanze-lin/Olympus_page/tree/main/asset/application.png)
 
 
 # Website License
