@@ -5,7 +5,7 @@
 [![Project Page](https://img.shields.io/badge/Project%20Page-Visit%20Now-0078D4?style=flat-square&logo=googlechrome&logoColor=white)](https://yuanze-lin.me/Olympus_page/)
 [![Weights](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-FFD21E)](https://huggingface.co/Yuanze/Olympus)
 
-### Official Implementation: https://github.com/yuanze-lin/Olympus
+### For the official implementation, please refer to: https://github.com/yuanze-lin/Olympus
 
 ## :page_facing_up: Abstract
 
